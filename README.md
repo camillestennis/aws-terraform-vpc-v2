@@ -10,11 +10,12 @@ Infrastructure-as-code project provisioning a small AWS environment entirely wit
 - S3 bucket
 
 ## Usage
-\`\`\`
+
+```
 terraform init
 terraform plan
 terraform apply
-\`\`\`
+```
 
 Outputs the instance's public IP (\`instance_public_ip\`) after apply.
 

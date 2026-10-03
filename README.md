@@ -1,3 +1,4 @@
+```markdown
 # AWS Terraform Portfolio Project (v2)
 
 Infrastructure as code project provisioning a small, multi AZ AWS network environment entirely with Terraform.
@@ -20,17 +21,19 @@ A single AZ, single subnet build proves you can provision infrastructure as code
 
 ## Usage
 
+```
 terraform init
 terraform plan
 terraform apply
-
+```
 
 Requires a `terraform.tfvars` file (not committed, see `.gitignore`) defining:
 
-my_ip = "YOUR_IP/32"
+```
+my_ip       = "YOUR_IP/32"
 environment = "portfolio"
-aws_region = "us-west-1"
-
+aws_region  = "us-west-1"
+```
 
 Also requires an EC2 key pair named `portfolio-key` to already exist in the target region.
 
@@ -41,3 +44,4 @@ Outputs the instance's public IP (`instance_public_ip`) after apply.
 Built as a hands on demonstration of network design and provisioning as code, as part of a cloud and network infrastructure portfolio. The security group intentionally restricts SSH to a single IP rather than leaving it open, since the point of this build is to show deliberate access control, not just a working instance.
 
 Remember to run `terraform destroy` when not actively using the deployed environment. The NAT Gateway incurs hourly charges and is not covered by the AWS Free Tier.
+```
